@@ -83,9 +83,9 @@ class PromptBasedSGRAgent(BaseAgent):
 
     async def _prepare_context(self) -> list[dict]:
         """Prepare conversation context with system prompt including tool schemas."""
-        from sgr_deep_research.core.services.prompt_loader import PromptLoader
-        import os
         from pathlib import Path
+
+        from sgr_deep_research.core.services.prompt_loader import PromptLoader
 
         # Get the tools that would be available
         tools = await self._get_available_tools()

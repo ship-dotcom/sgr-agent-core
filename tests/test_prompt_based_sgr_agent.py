@@ -4,15 +4,13 @@ This module contains tests for the PromptBasedSGRAgent class that uses
 prompt-based schema definition instead of response_format.
 """
 
-import json
-from unittest.mock import AsyncMock, Mock, patch
+from unittest.mock import Mock
 
 import pytest
 
-from sgr_deep_research.core.agent_definition import ExecutionConfig, LLMConfig, PromptsConfig
+from sgr_deep_research.core.agent_definition import ExecutionConfig
 from sgr_deep_research.core.agents.prompt_based_sgr_agent import PromptBasedSGRAgent
 from sgr_deep_research.core.tools import (
-    BaseTool,
     FinalAnswerTool,
     ReasoningTool,
     WebSearchTool,
