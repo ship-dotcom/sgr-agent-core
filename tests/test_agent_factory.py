@@ -16,6 +16,7 @@ from sgr_deep_research.core.agent_definition import (
 )
 from sgr_deep_research.core.agent_factory import AgentFactory
 from sgr_deep_research.core.agents import (
+    PromptBasedSGRAgent,
     SGRAgent,
     SGRAutoToolCallingAgent,
     SGRSOToolCallingAgent,
@@ -86,6 +87,7 @@ class TestAgentFactory:
             task = "Universal test task"
             agent_classes = [
                 SGRAgent,
+                PromptBasedSGRAgent,
                 SGRToolCallingAgent,
                 SGRAutoToolCallingAgent,
                 SGRSOToolCallingAgent,
